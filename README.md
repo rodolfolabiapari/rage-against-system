@@ -2,6 +2,7 @@
 ## Introducao
 
 Auto explicativo.
+tangerino solidies bater ponto
 
 ## Criação do repositório
 

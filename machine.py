@@ -46,15 +46,8 @@ codigo_field.send_keys(username)
 pin_field = driver.find_element(By.ID, "codigoPin")
 pin_field.send_keys(password)
 
-time.sleep(1)
 # Localizando o botão de registrar e clicando
 registrar_button = driver.find_element(By.ID, "registraPonto")
-registrar_button.click()
-time.sleep(1)
-registrar_button.click()
-time.sleep(1)
-registrar_button.click()
-time.sleep(1)
 registrar_button.click()
 
 time.sleep(3)
