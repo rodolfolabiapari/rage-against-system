@@ -16,5 +16,11 @@ source rage-against/bin/activate
 ```bash
 pip3 install selenium
 pip3 install python-dotenv
+
+# Definindo pacotes
+pip freeze > requirements.txt
+
+# Aplicando Pacotes
+pip install -r requirements.txt
 ```
 
