@@ -6,7 +6,7 @@ Auto explicativo.
 ## Criação do repositório
 
 ```bash
-sudo apt install python3-venv
+sudo apt install -y python3-venv chromium
 python3 -m venv rage-against
 source rage-against/bin/activate
 ```
