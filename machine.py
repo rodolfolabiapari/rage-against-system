@@ -21,6 +21,13 @@ chromium_binary_path = "/usr/bin/chromium"
 chrome_options = Options()
 chrome_options.binary_location = chromium_binary_path
 
+# Bloqueia camera e microfone por padrao
+prefs = {
+    "profile.default_content_setting_values.media_stream_camera": 2,
+    "profile.default_content_setting_values.media_stream_mic": 2,
+}
+chrome_options.add_experimental_option("prefs", prefs)
+
 # Inicializando o navegador
 service = Service(driver_path)
 driver = webdriver.Chrome(service=service, options=chrome_options)
@@ -29,7 +36,7 @@ driver = webdriver.Chrome(service=service, options=chrome_options)
 driver.get(url)
 
 # Aguarde a página carregar (depende da sua conexão)
-time.sleep(5)
+time.sleep(3)
 
 # Localizando o campo do código
 codigo_field = driver.find_element(By.ID, "codigoEmpregador")
@@ -39,11 +46,18 @@ codigo_field.send_keys(username)
 pin_field = driver.find_element(By.ID, "codigoPin")
 pin_field.send_keys(password)
 
+time.sleep(1)
 # Localizando o botão de registrar e clicando
 registrar_button = driver.find_element(By.ID, "registraPonto")
 registrar_button.click()
+time.sleep(1)
+registrar_button.click()
+time.sleep(1)
+registrar_button.click()
+time.sleep(1)
+registrar_button.click()
 
-time.sleep(5)
+time.sleep(3)
 
 # Fechar o navegador
 driver.quit()
