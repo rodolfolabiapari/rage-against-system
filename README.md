@@ -1,27 +1,25 @@
 # rage-against-system
+
 ## Introducao
 
-Auto explicativo.
-tangerino solidies bater ponto
+Acredito ser Auto explicativo.
 
-## Criação do repositório
+Tangerino solidies bater ponto, criado para ser executado como um script 
+automatico num raspberry qualquer, integrado com um bot telegram para facilitar
+a automacao da execucao.
 
-```bash
-sudo apt install -y python3-venv chromium
-python3 -m venv rage-against
-source rage-against/bin/activate
-```
+## Como utilizar
 
-## Requisitos
+### Instalacao
 
 ```bash
-pip3 install selenium
-pip3 install python-dotenv
+source venv/bin/activate
 
-# Definindo pacotes
-pip freeze > requirements.txt
-
-# Aplicando Pacotes
 pip install -r requirements.txt
+
+sudo apt update && sudo apt install -y chromium-browser
 ```
 
+## Features Novas
+
+Declaradas vagamente em (TODO)[TODO.md].
